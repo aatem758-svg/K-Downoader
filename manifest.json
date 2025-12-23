@@ -1,8 +1,8 @@
 {
   "name": "К-Установщик",
   "short_name": "К-Установщик",
-  "description": "Официальный установщик К-Банк",
-  "start_url": "index.html",
+  "description": "Официальный установщик",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffdd2d",
@@ -10,7 +10,8 @@
     {
       "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/T-Bank_Logo.svg/1200px-T-Bank_Logo.svg.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
