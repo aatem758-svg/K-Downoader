@@ -1,3 +1,7 @@
-self.addEventListener('fetch', function(event) {
-  // Просто заглушка для корректной работы PWA
+self.addEventListener('install', (e) => {
+  self.skipWaiting();
+});
+
+self.addEventListener('fetch', (e) => {
+  // Позволяет приложению работать корректно
 });
