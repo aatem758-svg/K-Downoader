@@ -145,6 +145,17 @@ border-radius: 50%; display: flex; align-items: center; justify-content: center;
 </div>
 </div>
 
+  <link rel="manifest" href="manifest.json">
+
+<script>
+// Скрипт для Android, чтобы сайт считался приложением
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(() => {
+    console.log('Service Worker Registered');
+  });
+}
+</script>
+  
 <script>
 // Проверка: открыто ли через иконку на главном экране
 function checkMode() {
