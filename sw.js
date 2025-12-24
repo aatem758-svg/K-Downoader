@@ -1,7 +1,12 @@
-self.addEventListener('install', (e) => {
-  self.skipWaiting();
+self.addEventListener('install', (event) => {
+    self.skipWaiting();
 });
 
-self.addEventListener('fetch', (e) => {
-  // Позволяет приложению работать корректно
+self.addEventListener('activate', (event) => {
+    event.waitUntil(clients.claim());
+});
+
+self.addEventListener('fetch', (event) => {
+    // Просто пропускаем запросы, чтобы приложение не висло
+    event.respondWith(fetch(event.request));
 });
